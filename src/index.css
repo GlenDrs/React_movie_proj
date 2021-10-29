@@ -19,7 +19,7 @@ code {
 }
 
 .dark-mode {
-	background-color: black;
+	background-color: rgb(73, 22, 22);
 }
 
 .dark-mode h1 {
@@ -45,7 +45,7 @@ code {
 }
 
 .note.new {
-	background-color: #67d7cc;
+	background-color: #b9b740;
 }
 
 textarea {
@@ -59,19 +59,19 @@ textarea:focus {
 }
 
 .save {
-	background-color: #e1e1e1;
+	background-color: #e3e4a3;
 	border: none;
 	border-radius: 15px;
 	padding: 5px 10px 5px 10px;
 }
 
 .save:hover {
-	background-color: #ededed;
+	background-color: #6e3e3e;
 	cursor: pointer;
 }
 
 .note {
-	background-color: #fef68a;
+	background-color: #68c98d;
 	border-radius: 10px;
 	padding: 1rem;
 	min-height: 170px;

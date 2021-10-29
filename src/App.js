@@ -8,7 +8,7 @@ const App = () => {
 	const [notes, setNotes] = useState([
 		{
 			id: nanoid(),
-			text: 'Donner quelque ressource pour webpack!',
+			text: 'Donner* quelque ressource pour webpack!',
 			date: '18/09/2021',
 		},
 		{
@@ -93,7 +93,8 @@ const App = () => {
 		const newNotes = notes.filter((note) => note.id !== id);
 		setNotes(newNotes);
 	};
-
+	
+	
 	return (
 		<div className={`${darkMode && 'dark-mode'}`}>
 			<div className='container'>
@@ -109,6 +110,7 @@ const App = () => {
 			</div>
 		</div>
 	);
+	
 };
 
 export default App;
