@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import ReactMarkdown from "react-markdown";
+import React, { Component } from "react";
+import Markdown from "react-textarea-markdown";
 
 const AddNote = ({ handleAddNote }) => {
 	const [noteText, setNoteText] = useState('');
@@ -15,18 +18,19 @@ const AddNote = ({ handleAddNote }) => {
 			handleAddNote(noteText);
 			setNoteText('');
 		}
+		
 	};
 
 	return (
-		<div className='note new'>
-			<textarea
+		
+		<div className='note-new'>
+			<Markdown textarea   
 				rows='8'
 				cols='10'
-				placeholder='Type to add a note...'
+				placeholder='Ajoutter votre RDV'
 				value={noteText}
-				onChange={handleChange}
-			></textarea>
-			<div className='note-footer'>
+				onChange={handleChange} 
+			/>
 				<small>
 					{characterLimit - noteText.length} Remaining
 				</small>
@@ -34,7 +38,12 @@ const AddNote = ({ handleAddNote }) => {
 					Save
 				</button>
 			</div>
-		</div>
+
+				
+
+		
+		
+
 	);
 };
 

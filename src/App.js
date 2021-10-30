@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 import Search from './components/Search';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 const App = () => {
 	const [notes, setNotes] = useState([
@@ -53,7 +54,7 @@ const App = () => {
     },
     {
     	id: nanoid(),
-    	text: 'Cérise sur le gateau... on les a même traité de Muthe Fuckers!',
+    	text: 'Cérise sur le gateau... on les a même traité de Muther Fuckers!',
     	date: '21/12/2021',
     },
 ]);
@@ -94,21 +95,26 @@ const App = () => {
 		setNotes(newNotes);
 	};
 	
-	
+
 	return (
-		<div className={`${darkMode && 'dark-mode'}`}>
-			<div className='container'>
+		
+			<div className={`${darkMode && 'dark-mode'}`}>
+		
 				<Header handleToggleDarkMode={setDarkMode} />
 				<Search handleSearchNote={setSearchText} />
-				<NotesList
-					notes={notes.filter((note) =>
-						note.text.toLowerCase().includes(searchText)
-					)}
-					handleAddNote={addNote}
-					handleDeleteNote={deleteNote}
-				/>
-			</div>
-		</div>
+					<div className="pg">
+						<Sidebar
+						
+						/>
+						<NotesList
+							notes={notes.filter((note) =>
+							note.text.toLowerCase().includes(searchText)
+							)}
+							handleAddNote={addNote}
+					 		handleDeleteNote={deleteNote}
+						/>
+					</div>	
+			</div>  
 	);
 	
 };

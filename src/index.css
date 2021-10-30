@@ -1,10 +1,13 @@
 body {
-	margin: 0;
+	margin: 10px;
+	width: 95%;
+	background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v462-n-130-textureidea_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9465282a2b0a375f4f5b120d7bbad882");
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
 		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -16,6 +19,7 @@ code {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	color:rgb(233, 233, 233);
 }
 
 .dark-mode {
@@ -26,26 +30,18 @@ code {
 	color: white;
 }
 
-.container {
-	max-width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: 15px;
-	padding-left: 15px;
-	min-height: 100vh;
-}
-
 .notes-list {
 	display: grid;
 	grid-gap: 1rem;
+	width: 80%;
+	height: 140vh;
+	opacity: 0.75;
 	grid-template-columns: repeat(
 		auto-fill,
 		minmax(250px, 1fr)
-	);
-}
+		
 
-.note.new {
-	background-color: #b9b740;
+	);
 }
 
 textarea {
@@ -109,3 +105,40 @@ textarea:focus {
 .search input:focus {
 	outline: none;
 }
+
+.note-new {
+	background-color: #b9b740;
+}
+.pg{
+  width: 100%;
+  height: 140vh;
+	display: flex;
+}
+
+
+
+/* The Side Bar */
+
+
+.pg-sidebar  {
+	margin-right: 7px;
+  width: 20%;
+  height: 140vh;
+  border-right: 1px solid rgb(80, 21, 21);
+	background-color: rgb(12, 248, 248);
+	opacity: 0.6;
+
+}
+
+.pg-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+.pg-sidebar-header h2 {
+  margin: 0;
+}
+
+ 
+
+ 
